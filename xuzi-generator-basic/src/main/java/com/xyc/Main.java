@@ -1,24 +1,17 @@
 package com.xyc;
 
+import com.xyc.cli.CommandExecutor;
+import sun.tools.jar.resources.jar;
+
 /**
  * @author: xuYuYu
- * @createTime: 2024/5/15 15:36
+ * @createTime: 2024/5/17 17:46
  * @Description: TODO
- */// TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
+ */
 public class Main {
-	private String name;
 	public static void main(String[] args) {
-		// TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-		// to see how IntelliJ IDEA suggests fixing it.
-		System.out.printf("Hello and welcome!");
-
-		for (int i = 1; i <= 5; i++) {
-			// TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-			// for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-			System.out.println("i = " + i);
-		}
+		// args = new String[] { "generator","-l","-a","-o","-help" };
+		CommandExecutor commandExecutor = new CommandExecutor();
+		commandExecutor.doExecute(args);
 	}
-
-
 }
